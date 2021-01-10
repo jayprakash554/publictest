@@ -1,0 +1,16 @@
+<h1>Website </h1>
+<form method="post"> 
+{% csrf_token %}
+{{ msg }}
+<br>
+
+{% for rowe in all_entries %}
+<input type="text" name="id" value="{{ rowe.id }}" />
+User Name
+<input type="text" name="name" value="{{ rowe.username }}"/>
+
+<input type="submit" name="submit" value="Update" />
+{% endfor %}
+</form>
+<br>
+<a href="/shop/mylist">Cancel </a>

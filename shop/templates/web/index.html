@@ -1,0 +1,10 @@
+<h1>Website </h1>
+<form method="post"> 
+{% csrf_token %}
+
+<h3>{{ message }}</h3>
+<br>
+Enter User Name
+<input type="text" name="name" value="{{ username }}"/>
+<input type="submit" name="submit" value="Submit" />
+</form>

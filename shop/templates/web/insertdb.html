@@ -1,0 +1,11 @@
+<h1>Website </h1>
+<form method="post"> 
+{% csrf_token %}
+{{ msg }}
+<br>
+Enter User Name
+<input type="text" name="name" value=""/>
+<input type="submit" name="submit" value="Submit" />
+</form>
+<br>
+<a href="/shop/mylist">View All List</a>

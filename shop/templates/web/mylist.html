@@ -1,0 +1,17 @@
+
+<h3>All Data List </h3>
+{{ usernameses }}
+
+<table style="width:40%;border-collapse: collapse;" border="1px">
+	<tr><th>ID</th><th>NAME</th><th></th><th></th></tr>
+	{% for rowe in all_entries  %}
+		<tr>
+			<td>{{ rowe.id}}</td>
+			<td>{{ rowe.username}}</td>
+			<td><a href="/shop/delete?id={{ rowe.id}}">Delete</a></td>
+			<td><a href="/shop/edit?id={{ rowe.id}}">Edit</a></td>
+		</tr>
+	{% endfor %}
+</table>
+<br>
+<a href="/shop">Insert New Record</a>

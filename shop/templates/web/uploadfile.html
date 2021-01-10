@@ -1,0 +1,21 @@
+<h1>Website </h1>
+
+<form name = "form" method="POST" enctype = "multipart/form-data" > 
+{% csrf_token %}
+{{ msg }}
+<br>
+Enter File Name
+<input type="text" name="username" value=""/>
+File 
+<input type="file" name="picture" />
+<input type="submit" name="submit" value="Submit" />
+</form>
+<br>
+<table style="width:40%;border-collapse: collapse;" border="1px">
+<tr><th>NAME </th><th>Picture </th></tr>
+{% for rowe in all_entries %}
+<tr><td>{{ rowe.username }}</td>
+<td><img src="shop/media/{{ rowe.picture }}" width="150" height="150" /></td>
+</tr>
+{% endfor %}
+</table>
